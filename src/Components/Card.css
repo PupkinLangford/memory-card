@@ -1,8 +1,20 @@
 .card {
     color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 .card img {
-    height: 100%;
-    width: 100%;
+    margin-bottom: 0;
+    height: 75%;
+}
+
+.Cardlabel {
+    background-color: #eeee00;
+    height: 40px;
+    margin-top: 0;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
