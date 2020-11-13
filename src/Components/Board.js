@@ -48,12 +48,27 @@ function shuffle(array) { //https://github.com/Daplie/knuth-shuffle
 
 const Board = props => {
 
-    const [images, setImages] = useState(shuffle([...imagesdir]))
+    const [images, setImages] = useState(shuffle([...imagesdir]));
+    const [clicked, setClicked] = useState([]);
+
+
+    const handleclick = (value) => {
+        console.log(value);
+        if (clicked.includes(value)) {
+            setClicked([]);
+        }
+        else {
+            setClicked([...clicked, value]);
+        }
+        setImages(shuffle([...imagesdir]));
+        props.handler(clicked.length);
+        console.log(clicked)
+    }
 
     return (
         <div className="Board">
             {images.map((img, index) => {
-              return <Card key={index} imgsrc={img.photo} country={img.country} id={img.id}/>
+              return <Card key={index} imgsrc={img.photo} country={img.country} handler={() => handleclick(img.id)}/>
             })}
         </div>
       );

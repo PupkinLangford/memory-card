@@ -7,9 +7,12 @@ import Board from './Components/Board'
 
 function App() {
 
+  const [score, setScore] = useState(0);
+
   return (
     <div className="App">
-      <Board/>
+      <div>{score}</div>
+      <Board handler={setScore}/>
     </div>
   );
 }
