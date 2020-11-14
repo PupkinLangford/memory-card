@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Board from './Components/Board'
 
 
@@ -8,6 +8,8 @@ import Board from './Components/Board'
 function App() {
 
   const [score, setScore] = useState(0);
+
+  useEffect (() => console.log(score));
 
   return (
     <div className="App">

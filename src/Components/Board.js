@@ -53,7 +53,6 @@ const Board = props => {
 
 
     const handleclick = (value) => {
-        console.log(value);
         if (clicked.includes(value)) {
             setClicked([]);
         }
@@ -61,9 +60,10 @@ const Board = props => {
             setClicked([...clicked, value]);
         }
         setImages(shuffle([...imagesdir]));
-        props.handler(clicked.length);
-        console.log(clicked)
     }
+
+    useEffect(() => props.handler(clicked.length));
+
 
     return (
         <div className="Board">
