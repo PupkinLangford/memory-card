@@ -1,7 +1,16 @@
 .App {
   text-align: center;
   height: 120vh;
+  width: 100vw;
   background-color: #777;
+  font-size: 24px;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 5vh;
 }
 
 

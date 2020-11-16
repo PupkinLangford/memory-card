@@ -18,8 +18,10 @@ function App() {
 
   return (
     <div className="App">
-      <div>{score}</div>
-      <div>{hiscore}</div>
+      <div className="scoreboard">
+        <div>{"Score: " + score}</div>
+        <div>{"High Score: " + hiscore}</div>
+      </div>
       <Board handler={setScore}/>
     </div>
   );

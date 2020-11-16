@@ -62,7 +62,9 @@ const Board = props => {
         setImages(shuffle([...imagesdir]));
     }
 
-    useEffect(() => props.handler(clicked.length));
+    useEffect(() => {
+        props.handler(clicked.length)
+    });
 
 
     return (
